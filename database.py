@@ -12,7 +12,7 @@ cursor = conn.cursor()
 
 def add_item(item, quantity):
     cursor.execute(
-        "INSERT INTO grocery_list(item, quantity) VALUES(%s,%s)",
+        "INSERT INTO grocery_list(item, quantity) VALUES(%s, %s)",
         (item, quantity)
     )
     conn.commit()
